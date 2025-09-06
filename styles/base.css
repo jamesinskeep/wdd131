@@ -82,6 +82,8 @@ main {
     gap: 20px;
     padding: 20px;
     text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .card img {
