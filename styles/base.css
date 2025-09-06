@@ -1,0 +1,115 @@
+:root {
+--primary-color: #46b1c9; 
+--secondary-color: #84c0c6; 
+--accent-color-1: #9fb7b9; 
+--accent-color-2: #bcc1ba; 
+--background-color: #f2e2d2; 
+--text-color: #333333; 
+
+
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.header-content {
+    display: block;
+    color: var(--text-color);
+    text-align: center;
+    padding: 10px;
+    font-family: 'roboto condensed', sans-serif;
+    font-size: 1.8rem;
+}
+
+nav {
+    background-color: #84c0c6;
+    margin: 0 auto;   
+    font-family: 'roboto condensed', sans-serif;
+    font-size: 1.6rem;
+}
+
+nav a {
+    display: block;
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem;
+
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav a:hover {
+    border: 1px solid var(--accent-color-2);
+    background-color: var(--accent-color-1);
+    color: var(--background-color);
+    text-decoration: none;
+}
+
+header, footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem;
+}
+
+.card {
+
+    background-color: var(--background-color);
+    border: 1px solid var(--accent-color-2);
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+    padding: 1rem;
+    font-family: 'quicksand', sans-serif;
+    font-size: 1.2rem;
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    text-align: left;
+}
+
+.card img {
+    border-radius: 5px;
+    margin: 10px 10px 10px 0;
+}
+
+.family-pic-image {
+    max-width: 200px;
+    float: right;
+    margin: 10px;
+}
+
+.raincross-image {
+    max-width: 150px;
+    float: left;
+    margin: 10px;
+}
+
+
+h2, h3 {
+    background-color: var(--primary-color);
+    font-family: 'roboto condensed', sans-serif;
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+h3 {
+    font-size: 1.2rem;
+    clear: both;
+}
