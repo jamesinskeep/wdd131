@@ -61,6 +61,7 @@ header, footer {
     color: var(--text-color);
     text-align: center;
     padding: 1rem;
+    color: black;
 }
 
 .card {
