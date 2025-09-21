@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Russia</title>
+    <meta name="author" content="James Inskeep">
+    <meta name="description" content="Russia - Place to visit">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" media="screen and (min-width: 800px)" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Russia</h1>
+    </header>
+
+    <main>
+        <picture>
+            <source media="(min-width: 800px)" srcset="images/st-basils-large.webp">
+            <img src="images/st-basils-small.webp" alt="St Basil's Cathedral in Moscow, Russia">
+        </picture>
+
+        <section class="data">
+            <h2>Data</h2>
+            <table class="table">
+                <tr>
+                    <td class="left-column">Area:</td>
+                    <td class="right-column">6,612,075 sq miles</td>
+                </tr>
+                <tr>
+                    <td class="left-column">Continent:</td>
+                    <td class="right-column">Europe/Asia</td>
+                </tr>
+                <tr>
+                    <td class="left-column">Capital:</td>
+                    <td class="right-column">Moscow</td>
+                </tr>
+                <tr>
+                    <td class="left-column">Language:</td>
+                    <td class="right-column">Russian</td>
+                </tr>
+                <tr>
+                    <td class="left-column">Currency:</td>
+                    <td class="right-column">Russian Ruble (RUB)</td>
+                </tr>
+                <tr>
+                    <td class="left-column">Population:</td>
+                    <td class="right-column">143.4 million (2021)</td>
+                </tr>
+                <tr>
+                    <td class="left-column">Time Zone:</td>
+                    <td class="right-column">UTC+2 to UTC+12</td>
+                </tr>
+                <tr>
+                    <td class="left-column">Calling Code:</td>
+                    <td class="right-column">+7</td>
+                </tr>
+                <tr>
+                    <td class="left-column">Internet TLD:</td>
+                    <td class="right-column">.ru</td>
+                </tr>
+            </table>
+        </section>
+        <section class="weather">
+            <h2>Weather <img class="icon" src="images/weather-icon.svg" alt="Weather Icon">
+</h2>
+            <table>
+                <tr>
+                    <td class="left-column">Temperature</td>
+                    <td class="right-column" id="temperature"></td>
+                </tr>
+                <tr>
+                    <td class="left-column">Condition</td>
+                    <td class="right-column" id="condition"></td>
+                </tr>
+                <tr>
+                    <td class="left-column">Wind</td>
+                    <td class="right-column" id="windSpeed"></td>
+                </tr>
+                <tr>
+                    <td class="left-column">Wind Chill</td>
+                    <td class="right-column" id="windChill"></td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> James Inskeep</p>
+        <p>Russia</p>
+        <p id="lastModified"></p>
+    </footer>
+    
+</body>
+</html>
