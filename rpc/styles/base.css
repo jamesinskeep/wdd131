@@ -1,0 +1,197 @@
+:root {
+    --border-color: #010122; /* Navy Blue */
+    --court-color: #2774AE; /* Light Blue */
+    --kitchen-color: #F1BE2F; /* Yellow */
+    --line-color-1: #FFFFFF; /* White */
+    --text-color: #000000; /* Black */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: var(--court-color);
+    color: var(--text-color);
+}
+
+.navbar {
+    background-color: var(--border-color);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-img {
+    height: 250px; /* Adjust based on your logo size */
+    width: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    color: var(--line-color-1);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.nav-links a:hover {
+    color: var(--kitchen-color);
+}
+
+header {
+    background-color: var(--border-color);
+    color: var(--line-color-1);
+    text-align: center;
+    padding: 2rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    border-bottom: 5px solid var(--kitchen-color);
+}
+
+.body-content {
+    padding: 1rem;
+}
+
+.welcome, .events {
+    margin-bottom: 2rem;
+    background-color: var(--line-color-1);
+    padding: 1rem;
+    border: 2px solid var(--border-color);
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background-color: var(--kitchen-color);
+    color: var(--text-color);
+    padding: 0.5rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+td {
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+}
+
+.left-column {
+    text-align: right;
+    width: 40%;
+    background-color: var(--line-color);
+}
+
+.right-column {
+    text-align: left;
+    width: 60%;
+    background-color: var(--line-color-1);
+}
+
+footer {
+    text-align: center;
+    background-color: var(--border-color);
+    color: var(--line-color-1);
+    padding: 1rem;
+    border-top: 3px solid var(--kitchen-color);
+}
+
+.court {
+    width: 100%;
+    max-width: 600px; /* Approximate court width; adjust as needed */
+    border-collapse: collapse;
+    margin: 2rem auto; /* Center the table */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.court td {
+    padding: 2rem; /* Simulate court padding/zones */
+    border: 5px solid var(--line-color-1); /* White lines for court boundaries */
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Outer columns (left and right sides) */
+.outer-column {
+    background-color: var(--court-color); /* Yellow for kitchen/non-volley zones */
+    width: 30%; /* Adjust to balance with middle column */
+}cour
+
+/* Middle column (kitchen) */
+.middle-column {
+    background-color: var(--border-color); /* Navy Blue for net/center area */
+    width: 40%; /* Wider to emphasize net */
+    border-left: 2px solid var(--line-color-1); /* Left line */
+    border-right: 2px solid var(--line-color-1); /* Right line */
+}
+
+/* Ensure outer columns have bottom borders between rows */
+.outer-column + .outer-column {
+    border-top: 2px solid var(--line-color-1); /* Top border for second row cells */
+}
+
+/* Add net-like effect with a vertical line */
+.middle-column::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background-color: var(--line-color-1); /* White net line */
+    left: 50%;
+}
+
+/* Adjust for proper positioning of the pseudo-element */
+.middle-column {
+    position:relative; /* For ::before positioning */
+}
+
+
+@media screen and (min-width: 800px) {
+    .body-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .welcome, .events {
+        padding: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    table {
+        font-size: 1rem;
+    }
+
+    .navbar {
+        padding: 1.5rem 2rem;
+    }
+
+    .nav-links li {
+        margin-left: 3rem;
+    }
+}

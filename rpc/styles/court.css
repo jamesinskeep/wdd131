@@ -1,0 +1,64 @@
+:root {
+    --border-color: #010122; /* Navy Blue */
+    --court-color: #2774AE; /* Light Blue */
+    --kitchen-color: #F1BE2F; /* Yellow */
+    --line-color-1: #FFFFFF; /* White */
+    --text-color: #000000; /* Black */
+    background-color: var(--border-color); /* Changed from border-color to court-color for body */
+}
+
+.court {
+    width: 100%;
+    max-width: 600px; /* Approximate court width; adjust as needed */
+    border-collapse: collapse;
+    margin: 2rem auto; /* Center the table */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: var(--court-color); /* Court surface color */
+}
+
+.court td {
+    padding: 2rem; /* Simulate court padding/zones */
+    border: 5px solid var(--line-color-1); /* White lines for court boundaries */
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Outer columns (left and right sides) */
+.outer-column {
+    background-color: var(--court-color); /* Yellow for kitchen/non-volley zones */
+    width: 30%; /* Adjust to balance with middle column */
+}
+
+/* Middle column (kitchen area) */
+.middle-column {
+    background-color: var(--kitchen-color); /* Yellow for kitchen, corrected from navy */
+    width: 40%; /* Wider to emphasize net */
+    border-left: 2px solid var(--line-color-1); /* Left line */
+    border-right: 2px solid var(--line-color-1); /* Right line */
+    position: relative; /* For ::before positioning */
+}
+
+/* Ensure outer columns have bottom borders between rows */
+.outer-column + .outer-column {
+    border-top: 2px solid var(--line-color-1); /* Top border for second row cells */
+}
+
+/* Add net-like effect with a vertical line */
+.middle-column::before {
+    content: '';
+    position: absolute;
+    height: 100%; /* Full height of the merged cell */
+    width: 2px;
+    background-color: var(--line-color-1); /* White net line */
+    left: 50%;
+    transform: translateX(-50%); /* Center the line */
+    top: 0; /* Start from the top of the merged cell */
+    box-sizing: border-box; /* Ensure height includes borders */
+}
+
+.court-logo {
+    max-width: 80%; /* Adjust size as needed */
+    height: auto;
+}
