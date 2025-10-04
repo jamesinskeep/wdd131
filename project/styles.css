@@ -1,0 +1,154 @@
+:root {
+    --primary-color: #000080; /* Navy */
+    --secondary-color: #FFA500; /* Orange */
+    --background-color: #F0F8FF; /* Alice Blue */
+    --accent-color: #1E90FF; /* Dodger Blue */
+    --text-color: #333333; /* Dark Gray */
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+header {
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--background-color)
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--accent-color);
+    color: black;
+}
+
+.header-content {
+    display: block;
+    color: var(--text-color);
+    text-align: center;
+    padding: 10px;
+    font-family: var(--font-family);
+    font-size: 1.8rem;
+}
+
+nav {
+    background-color: var(--secondary-color);
+    font-family: var(--font-family);
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+nav a {
+    display: block;
+    color: black;
+    text-align: left;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: block; 
+}
+
+nav a:hover {
+    border: 1px solid var(--accent-color);
+    background-color: var(--accent-color);
+    color: var(--background-color);
+}
+
+#menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: .5rem .75rem;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    position: static;
+    top: 0;
+    right: 0;
+}
+
+#menu::before {
+    content: "≡";
+}
+
+#menu.show::before {
+    content: "✕";
+}
+
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block; 
+}
+
+.navigation.show ul {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+@media (max-width: 799px) {
+    #menu {
+        display: block;
+    }
+
+    .navigation {
+        position: relative;
+    }
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    max-width: 840px;
+    margin: 0 auto;
+    display: block;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+}
+
