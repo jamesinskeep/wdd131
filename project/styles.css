@@ -5,6 +5,7 @@
     --accent-color: #1E90FF; /* Dodger Blue */
     --text-color: #333333; /* Dark Gray */
     --font-family: 'Poppins', sans-serif;
+    --border-color: #000000; /* Black */
 }
 
 * {
